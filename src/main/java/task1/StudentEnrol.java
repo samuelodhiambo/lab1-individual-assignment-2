@@ -15,7 +15,27 @@ class StudentEnrol {
     private Set<String> electives = new HashSet<String>();
     private Set<String> cores = new HashSet<String>();
 
+    // constructor
+    public StudentEnrol(Set<String> electives, Set<String> cores) throws Exception {
+        this.electives = electives;
+        this.cores = cores;
+        validateState();
+    }
+
     // Add Invariant
+    private void validateState() throws Exception {
+        Exception error = new Exception();
+        String message = "";
+        // Check if electives is empty
+        if (electives.isEmpty()) {
+            message = message + "-electives cannot be empty. ";
+        }
+        // check if cores is empty
+        if (cores.isEmpty()) {
+            message = message + " -cores cannot be empty.";
+        }
+        throw new Exception(message);
+    }
 
 
 
@@ -93,5 +113,10 @@ class StudentEnrol {
     public void display() {
         for (String course : cores) System.out.println(course);
         for (String course : electives) System.out.println(course);
+    }
+
+    public static void main(String[] args) {
+        StudentEnrol enrol = new StudentEnrol();
+        enrol.display();
     }
 }

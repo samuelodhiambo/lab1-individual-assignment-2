@@ -1,6 +1,5 @@
 # OOSD LAB 1: Weeks 3-6
 
-This assessment is _individual_. You are not allowed to publish your assignment, copy the repository, share the solution with teammates, or anything of the like. Refer to the standard warning in Canvas.
 
 
 
